@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Stage } from "react-pixi-fiber";
-import RotatingBunny from "./components/Rectangle";
+import styled from 'styled-components';
+import Rectangle from "./components/Rectangle";
+import {CANVAS_WIDTH,CANVAS_HEIGHT} from './constants/gameConstants';
 
-const height = 450;
-const width = 600;
+const StageWrapper = styled.div`
+  display: flex;
+  justify-content: center
+`;
+
 const OPTIONS = {
   backgroundColor: 0x1099bb
 };
@@ -12,9 +17,11 @@ const OPTIONS = {
 class Game extends Component {
   render() {
     return (
-      <Stage options={OPTIONS} width={width} height={height}>
-        <RotatingBunny x={width / 2} y={height / 2} />
-      </Stage>
+      <StageWrapper>
+        <Stage options={OPTIONS} width={CANVAS_WIDTH} height={CANVAS_HEIGHT}>
+          <Rectangle x={100} y={50} />
+        </Stage>
+      </StageWrapper>
     );
   }
 }
