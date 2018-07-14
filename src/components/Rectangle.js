@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Logo from './Logo';
+import Bunny from './Bunny';
 
 // http://pixijs.io/examples/#/basics/basic.js
 class Rectangle extends Component {
@@ -27,7 +27,7 @@ class Rectangle extends Component {
   };
 
   render() {
-    return <Logo {...this.props} rotation={this.state.rotation} />;
+    return <Bunny {...this.props} rotation={this.state.rotation} />;
   }
 }
 Rectangle.contextTypes = {

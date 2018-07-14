@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import { Stage } from 'react-pixi-fiber';
 import styled from 'styled-components';
 import Rectangle from './components/Rectangle';
