@@ -5,7 +5,7 @@ import * as PIXI from "pixi.js";
 const bunny = "https://i.imgur.com/IaUrttj.png";
 const centerAnchor = new PIXI.Point(0.5, 0.5);
 
-function Bunny(props) {
+function Logo(props) {
   return (
     <Sprite
       anchor={centerAnchor}
@@ -15,4 +15,4 @@ function Bunny(props) {
   );
 }
 
-export default Bunny;
+export default Logo;
