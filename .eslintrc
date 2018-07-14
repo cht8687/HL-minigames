@@ -1,7 +1,12 @@
 {
-  "extends": "react-app",
-  "plugins": ["prettier"],
+  "parser": "babel-eslint",
+  "plugins": [
+    "prettier"
+  ],
+  "extends": [
+    "react-app",
+    "plugin:prettier/recommended"
+  ],
   "rules": {
-    "prettier/prettier": "error"
   }
 }

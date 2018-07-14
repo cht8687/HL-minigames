@@ -16,12 +16,23 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "pretty-quick --staged"
+    "lint:js": "babel-node node_modules/eslint/bin/eslint ./",
+    "lint:js:fix": "babel-node node_modules/eslint/bin/eslint --quiet --fix ./",
+    "lint": "npm run lint:js",
+    "lint:fix": "npm run lint:js:fix",
+    "precommit": "lint-staged"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.2",
     "husky": "^0.14.3",
-    "prettier": "1.13.7",
-    "pretty-quick": "^1.6.0"
+    "lint-staged": "^7.2.0",
+    "prettier": "1.13.7"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "babel-node node_modules/eslint/bin/eslint --quiet --fix",
+      "git add"
+    ]
   }
 }

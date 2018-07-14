@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { Stage } from "react-pixi-fiber";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { Stage } from 'react-pixi-fiber';
 import styled from 'styled-components';
-import Rectangle from "./components/Rectangle";
-import {CANVAS_WIDTH,CANVAS_HEIGHT} from './constants/gameConstants';
+import Rectangle from './components/Rectangle';
+import { CANVAS_WIDTH, CANVAS_HEIGHT } from './constants/gameConstants';
 
 const StageWrapper = styled.div`
   display: flex;
-  justify-content: center
+  justify-content: center;
 `;
 
 const OPTIONS = {
-  backgroundColor: 0x1099bb
+  backgroundColor: 0x1099bb,
 };
 
 class Game extends Component {

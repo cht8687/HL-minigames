@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import Logo from "./Logo";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Logo from './Logo';
 
 // http://pixijs.io/examples/#/basics/basic.js
 class Rectangle extends Component {
   state = {
-    rotation: 0
+    rotation: 0,
   };
 
   componentDidMount() {
@@ -22,7 +22,7 @@ class Rectangle extends Component {
     // creates frame-independent tranformation
     this.setState(state => ({
       ...state,
-      rotation: state.rotation + 0.1 * delta
+      rotation: state.rotation + 0.1 * delta,
     }));
   };
 
@@ -31,7 +31,7 @@ class Rectangle extends Component {
   }
 }
 Rectangle.contextTypes = {
-  app: PropTypes.object
+  app: PropTypes.object,
 };
 
 export default Rectangle;
